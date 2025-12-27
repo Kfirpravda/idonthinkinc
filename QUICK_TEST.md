@@ -2,20 +2,30 @@
 
 ## Quick Start - Run Tests Now
 
-### Option 1: Standalone Test (Recommended - No Build Required)
+### Option 1: Verify Agents (Recommended - No Build Required)
 
 ```bash
-cd packages/agents
-node standalone-test.js
+node verify-agents.js
 ```
 
-This runs a complete test suite testing:
-- ✅ TrendResearcherAgent - Finding trending topics
-- ✅ ScripterAgent - Generating video scripts
-- ✅ VoiceActorAgent - Creating voiceover audio
-- ✅ QualityCriticAgent - Rating video quality
+This verifies:
+- ✅ All 9 agents exist
+- ✅ All agents extend BaseAgent
+- ✅ All agents have required methods
+- ✅ Shared types are defined
+- ✅ Documentation exists
 
-**No TypeScript compilation needed** - runs directly from source files!
+**No TypeScript compilation needed** - runs in seconds!
+
+### Option 2: Build and Run Tests
+
+```bash
+# From project root
+npm run build
+
+# Run tests
+node test-runner.js
+```
 
 ### Option 2: Build and Test
 
