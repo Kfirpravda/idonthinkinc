@@ -1,0 +1,1 @@
+export { FootageCreatorAgent } from './FootageCreatorAgent';

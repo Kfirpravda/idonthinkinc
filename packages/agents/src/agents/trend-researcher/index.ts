@@ -1,0 +1,1 @@
+export { TrendResearcherAgent } from './TrendResearcherAgent';
