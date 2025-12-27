@@ -61,15 +61,57 @@ idonthinkinc/
 ### Prerequisites
 
 - Node.js 18+
-- FFmpeg
-- GitHub CLI
-- Docker (optional, for consistent environments)
+- FFmpeg installed and available in PATH
+- Git
+- GitHub CLI (optional, for PRs)
 
-### Installation
+### Initial Setup
 
+1. Clone the repository:
+```bash
+git clone https://github.com/Kfirpravda/idonthinkinc.git
+cd idonthinkinc
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
+
+3. Copy environment variables:
+```bash
+cp .env.example .env
+```
+
+4. Edit `.env` with your API keys and configuration.
+
+5. Verify agents are working:
+```bash
+node verify-agents.js
+```
+
+This will verify all 9 agents are properly implemented!
+
+6. Start development services:
+```bash
+npm run dev
+```
+
+### Testing Agents
+
+**Quick Verification** (No build required):
+```bash
+node verify-agents.js
+```
+
+**Full Testing** (After installing TypeScript):
+```bash
+npm install -D typescript ts-node @types/node
+npm run build
+node packages/agents/test-runner.js
+```
+
+See [TESTING_STATUS.md](TESTING_STATUS.md) for complete testing guide.
 
 ### Environment Setup
 
