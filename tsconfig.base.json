@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@idonthinkinc/shared-types": ["./packages/shared-types/src"],
+      "@idonthinkinc/agents": ["./packages/agents/src"],
+      "@idonthinkinc/workflow-engine": ["./packages/workflow-engine/src"],
+      "@idonthinkinc/storage": ["./packages/storage/src"],
+      "@idonthinkinc/config": ["./packages/config/src"],
+      "@idonthinkinc/service-openai": ["./services/openai/src"],
+      "@idonthinkinc/service-elevenlabs": ["./services/elevenlabs/src"],
+      "@idonthinkinc/service-youtube": ["./services/youtube/src"],
+      "@idonthinkinc/service-ffmpeg": ["./services/ffmpeg/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".next", "build"]
+}
