@@ -78,9 +78,11 @@ export interface ApprovalContent {
 
 // Trend Research Agent Types
 export interface TrendResearchInput {
-  competitorUrl: string;
-  timeframe: string;
+  category?: string;  // e.g., 'technology', 'gaming', 'entertainment', 'news'
+  timeframe: string;  // e.g., '1h', '24h', '7d', '30d'
+  source?: 'youtube' | 'tiktok' | 'twitter' | 'google-trends' | 'reddit';
   depth?: 'basic' | 'comprehensive' | 'deep';
+  location?: string;  // e.g., 'US', 'UK', 'global'
 }
 
 export interface Trend {
@@ -99,10 +101,12 @@ export interface TrendResearchOutput {
 }
 
 export interface ResearchMetadata {
-  competitorUrl: string;
+  category?: string;
+  source: string;
   analyzedAt: Date;
   timeframe: string;
-  totalContentAnalyzed: number;
+  location?: string;
+  totalTrendsFound: number;
   topKeywords: string[];
 }
 
